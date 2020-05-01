@@ -64,4 +64,4 @@ names(meanAndDeviationData)<-gsub("^f", "frequency", names(meanAndDeviationData)
 tidy_data <- meanAndDeviationData %>% group_by(subjectId, activityName) %>% summarise_all(mean)
 
 setwd('..')
-write.table(tidy_data, file="tidy_data.txt")
+write.table(tidy_data, file="tidy_data.txt", row.names = FALSE)
